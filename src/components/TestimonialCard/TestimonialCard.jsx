@@ -1,11 +1,19 @@
 import React from "react";
 import { ProgressBar } from "../ProgressBar";
 
-const TestimonialCard = ({ cardData, setStartIndex, setEndIndex }) => {
+const TestimonialCard = ({
+  cardData,
+  setStartIndex,
+  setEndIndex,
+  totalTestimonial,
+  endIndex,
+}) => {
   return (
     <div className="md:w-[862px] w-[392px] h-fit bg-white rounded-xl md:py-14 md:px-10 py-10 px-5 shadow-lg">
       <div className="w-full md:h-1.5 h-1">
         <ProgressBar
+          totalTestimonial={totalTestimonial}
+          endIndex={endIndex}
           setStartIndex={setStartIndex}
           setEndIndex={setEndIndex}
           testimonial={cardData?.testimonial}

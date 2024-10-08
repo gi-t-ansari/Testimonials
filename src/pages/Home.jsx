@@ -33,6 +33,8 @@ const Home = () => {
             ?.slice(startIndex, endIndex)
             .map((item) => (
               <TestimonialCard
+                totalTestimonial={testimonialsData?.length}
+                endIndex={endIndex}
                 setStartIndex={setStartIndex}
                 setEndIndex={setEndIndex}
                 key={item?.name}
